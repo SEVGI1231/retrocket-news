@@ -1,8 +1,16 @@
 import Card from "react-bootstrap/Card";
 import { BaseURL } from "../utils/formatApi";
 import styles from "./newsCard.module.css";
+import { AuthorCard } from "./AuthorCard";
 
-export function NewsCard({ title, date, image }) {
+export function NewsCard({
+  title,
+  date,
+  postImage,
+  authorImage,
+  name,
+  surname,
+}) {
   return (
     <>
       <Card className={styles.card} style={{ width: "40%" }}>
@@ -11,11 +19,18 @@ export function NewsCard({ title, date, image }) {
             variant="top"
             height="300px"
             width="350px"
-            src={`${BaseURL}${image.replace("post", "posts")}`}
+            src={`${BaseURL}${postImage.replace("post", "posts")}`}
           />
           <Card.Title> {title}</Card.Title>
         </Card.Body>
-        <Card.Footer>{date}</Card.Footer>
+
+        <Card.Footer className={styles.footer}>
+          <Card.Img src={`${BaseURL}${authorImage}`} className={styles.image} />
+          <div className={styles.footerText}>
+            <Card.Title>{`${name} ${surname}`}</Card.Title>
+            <small className="text-muted">{date}</small>
+          </div>
+        </Card.Footer>
       </Card>
     </>
   );

@@ -6,11 +6,16 @@ export default function Posts({ posts }) {
   return (
     <>
       {data.map((post) => (
-        <NewsCard
-          title={post.title}
-          date={post.published_at}
-          image={post.featured_image_url}
-        />
+        <>
+          <NewsCard
+            title={post.title}
+            date={post.published_at}
+            postImage={post.featured_image_url}
+            authorImage={post.user.profile_image}
+            name={post.user.name}
+            surname={post.user.surname}
+          />
+        </>
       ))}
     </>
   );
