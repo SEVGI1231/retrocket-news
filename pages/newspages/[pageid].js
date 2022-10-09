@@ -1,8 +1,9 @@
 import { BaseURL } from "../../utils/baseurl";
 import { NewsCard } from "../../components/newsCard.js";
-import styles from "../../styles/posts.module.css";
+import styles from "../../styles/pages.module.css";
 import { PaginationTab } from "../../components/PaginationTab";
-export default function Posts({ pageid, data }) {
+
+export default function Pages({ data }) {
   console.log(data);
   return (
     <>
