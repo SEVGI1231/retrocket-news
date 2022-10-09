@@ -1,11 +1,8 @@
-.body{
-    display: flex;
-    flex-direction: row;
+.image{
+    border-radius: 30%;
+    height: 150px;
+    width: 150px;
     justify-content: center;
     align-content: center;
-}
-.image{
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-}
+};
+
