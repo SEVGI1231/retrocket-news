@@ -2,14 +2,14 @@
     margin: 4rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
 
 }
 .profileimg{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    border-radius: 40%;
     margin-bottom: 1rem;
 }
 .writerinfo{
@@ -19,7 +19,15 @@
     justify-content: left;
     margin-bottom: 1rem;
     width: 100%;
-    .child{
-        margin-left: 2rem;
+    p{
+        margin-left: 1rem;
+        font-size: 1.2rem;
+        font-weight: 200;
     }
+    
+}
+.featuredimg{
+    height: 500px;
+    width: 500px;
+    justify-content: center;
 }

@@ -27,6 +27,7 @@ export default function Posts({ data }) {
             "posts/"
           )}`}
           alt="featured_image"
+          className={styles.featuredimg}
         />
         <br />
         <p>{data.content}</p>
