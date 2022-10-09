@@ -1,6 +1,6 @@
 import { Card } from "react-bootstrap";
 import styles from "./AuthorCard.module.css";
-import { BaseURL } from "../utils/formatApi";
+import { BaseURL } from "../utils/baseurl";
 
 export function AuthorCard({ imgURL, name, surname }) {
   return (

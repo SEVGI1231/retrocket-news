@@ -1,7 +1,6 @@
 import Card from "react-bootstrap/Card";
-import { BaseURL } from "../utils/formatApi";
+import { BaseURL } from "../utils/baseurl";
 import styles from "./newsCard.module.css";
-import { AuthorCard } from "./AuthorCard";
 
 export function NewsCard({
   title,
@@ -19,7 +18,7 @@ export function NewsCard({
             variant="top"
             height="300px"
             width="350px"
-            src={`${BaseURL}${postImage.replace("post", "posts")}`}
+            src={`${BaseURL}${postImage.replace("post/", "posts/")}`}
           />
           <Card.Title> {title}</Card.Title>
         </Card.Body>

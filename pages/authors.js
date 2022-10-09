@@ -1,5 +1,5 @@
 import { AuthorCard } from "../components/AuthorCard";
-import { BaseURL } from "../utils/formatApi";
+import { BaseURL } from "../utils/baseurl";
 import styles from "../styles/authors.module.css";
 
 export default function Authors({ authors }) {
