@@ -3,7 +3,6 @@ import Image from "next/image";
 import styles from "../../styles/posts.module.scss";
 
 export default function Posts({ data }) {
-  console.log(data);
   return (
     <>
       <div className={styles.page}>
