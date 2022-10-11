@@ -1,9 +1,10 @@
 import { BaseURL } from "../../utils/baseurl";
-import { NewsCard, useRecentlyLikedData } from "../../components/newsCard.js";
+import { NewsCard } from "../../components/newsCard.js";
 import styles from "../../styles/pages.module.css";
 import { PaginationTab } from "../../components/PaginationTab";
 import { RecentlyViewed } from "../../components/recentlyViewed";
 import { useEffect, useState } from "react";
+
 export default function Pages({ data }) {
   console.log(data);
   const [recentlyViewedData, setRecentlyViewedData] = useState([]);

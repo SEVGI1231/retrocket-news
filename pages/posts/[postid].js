@@ -1,5 +1,4 @@
 import { BaseURL } from "../../utils/baseurl";
-import Image from "next/image";
 import styles from "../../styles/posts.module.scss";
 
 export default function Posts({ data }) {

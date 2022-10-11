@@ -7,11 +7,15 @@ export function RecentlyViewed({ posts }) {
     <>
       <Accordion>
         <Accordion.Item eventKey="0">
-          <Accordion.Header>Recently Viewed News</Accordion.Header>
+          <Accordion.Header>
+            <h2 className={styles.title}>Recently Viewed News</h2>
+          </Accordion.Header>
           <Accordion.Body>
             {posts.map((post) => (
-              <Card key={post.id}>
-                <Card.Text>{post.title}</Card.Text>
+              <Card className={styles.card} key={post.id}>
+                <Card.Body>
+                  <Card.Title>{post.title}</Card.Title>
+                </Card.Body>
                 <Card.Footer className={styles.footer}>
                   <Card.Img
                     className={styles.image}
