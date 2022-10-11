@@ -5,7 +5,7 @@ import styles from "./recentlyViewed.module.scss";
 export function RecentlyViewed({ posts }) {
   return (
     <>
-      <Accordion>
+      <Accordion style={{ width: "100%" }}>
         <Accordion.Item eventKey="0">
           <Accordion.Header>
             <h2 className={styles.title}>Recently Viewed News</h2>
