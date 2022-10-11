@@ -1,11 +1,4 @@
-.card{
-    margin: 10px;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+$green: #bad59e;
 .image{
     border-radius: 50%;
     height: 60px;
@@ -19,4 +12,10 @@
 }
 .footerText{
     margin-left: 10px;
+}
+.card{
+    margin: 10px;
+}
+.title{
+    color: $green;
 }

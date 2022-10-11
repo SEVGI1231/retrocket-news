@@ -4,9 +4,10 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-  
- 
+    margin: 2%;
 }
+
+
 .pagination{
     display: flex;
     flex-direction: row;

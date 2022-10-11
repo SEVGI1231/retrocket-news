@@ -1,5 +1,4 @@
 import { BaseURL } from "../../utils/baseurl";
-import Image from "next/image";
 import styles from "../../styles/posts.module.scss";
 
 export default function Posts({ data }) {
@@ -19,17 +18,18 @@ export default function Posts({ data }) {
             {data.user.name} {data.user.surname}
           </p>
         </div>
-        <br />
-        <img
-          src={`${BaseURL}${data.featured_image_url.replace(
-            "post/",
-            "posts/"
-          )}`}
-          alt="featured_image"
-          className={styles.featuredimg}
-        />
-        <br />
-        <p>{data.content}</p>
+        <hr />
+        <div className={styles.postinfo}>
+          <img
+            src={`${BaseURL}${data.featured_image_url.replace(
+              "post/",
+              "posts/"
+            )}`}
+            alt="featured_image"
+            className={styles.featuredimg}
+          />
+          <p className={styles.text}>{data.content}</p>
+        </div>
       </div>
     </>
   );

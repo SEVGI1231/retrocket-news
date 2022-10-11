@@ -1,0 +1,21 @@
+$pink: #ff7474;
+$orange: #eeac8d;
+$green: #d8f0be;
+$light: #e6efe0;
+
+.navbar{
+    background-color: $green;
+    width: 100%;
+}
+.link{
+    color: $pink;
+    font-size: larger;
+    &:hover{
+        color: $orange;
+    }
+}
+.item{
+    &:hover{
+        background-color: $light;
+    }
+}

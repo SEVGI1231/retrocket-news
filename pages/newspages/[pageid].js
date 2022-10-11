@@ -1,10 +1,18 @@
 import { BaseURL } from "../../utils/baseurl";
-import { NewsCard, useRecentlyLikedData } from "../../components/newsCard.js";
+import { NewsCard } from "../../components/newsCard.js";
 import styles from "../../styles/pages.module.css";
 import { PaginationTab } from "../../components/PaginationTab";
+import { RecentlyViewed } from "../../components/recentlyViewed";
+import { useEffect, useState } from "react";
 
 export default function Pages({ data }) {
   console.log(data);
+  const [recentlyViewedData, setRecentlyViewedData] = useState([]);
+  useEffect(() => {
+    let recentlyViewedData = JSON.parse(sessionStorage.getItem("post"));
+    setRecentlyViewedData(recentlyViewedData);
+  }, []);
+  console.log(recentlyViewedData);
 
   return (
     <>
@@ -19,12 +27,7 @@ export default function Pages({ data }) {
         <PaginationTab />
       </div>
       <div>
-        <h2>Recently Visited News</h2>
-        {typeof window !== "undefined" &&
-          JSON.parse(sessionStorage.getItem("post")) !== null &&
-          JSON.parse(sessionStorage.getItem("post")).map((post) => (
-            <p>{post.title}</p>
-          ))}
+        <RecentlyViewed posts={recentlyViewedData} />
       </div>
     </>
   );

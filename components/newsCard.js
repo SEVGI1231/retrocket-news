@@ -1,6 +1,6 @@
 import { Card, Button } from "react-bootstrap";
 import { BaseURL } from "../utils/baseurl";
-import styles from "./newsCard.module.css";
+import styles from "./newsCard.module.scss";
 import { useRouter } from "next/router";
 
 export function NewsCard({ post, recentlyLiked, setRecentlyLiked }) {
@@ -17,15 +17,15 @@ export function NewsCard({ post, recentlyLiked, setRecentlyLiked }) {
   }
 
   return (
-    <>
+    <div>
       <Button
         variant="light"
-        className="p0 m2"
-        style={{ width: "20rem", height: "33rem" }}
+        className={styles.button}
+        style={{ width: "250px", height: "525px" }}
         onClick={() => handleClick(post.id, post)}
       >
-        <Card className={styles.card} style={{ width: "90%" }}>
-          <Card.Body>
+        <Card className={styles.card}>
+          <Card.Body className={styles.body}>
             <Card.Img
               variant="top"
               height="300px"
@@ -50,6 +50,6 @@ export function NewsCard({ post, recentlyLiked, setRecentlyLiked }) {
           </Card.Footer>
         </Card>
       </Button>
-    </>
+    </div>
   );
 }
