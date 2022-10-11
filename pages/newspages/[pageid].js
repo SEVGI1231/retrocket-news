@@ -19,7 +19,9 @@ export default function Pages({ data }) {
         <PaginationTab />
       </div>
       <div>
+        <h2>Recently Visited News</h2>
         {typeof window !== "undefined" &&
+          JSON.parse(sessionStorage.getItem("post")) !== null &&
           JSON.parse(sessionStorage.getItem("post")).map((post) => (
             <p>{post.title}</p>
           ))}
