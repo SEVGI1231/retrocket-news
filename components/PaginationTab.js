@@ -17,5 +17,23 @@ export function PaginationTab() {
       </Button>
     );
   }
-  return <div>{items}</div>;
+  return (
+    <div>
+      <Button
+        className="m-2 rounded-pill shadow p-3 "
+        variant="outline-secondary"
+        size="lg"
+      >
+        Prev
+      </Button>
+      {items}
+      <Button
+        className="m-2 rounded-pill shadow p-3 "
+        variant="outline-secondary"
+        size="lg"
+      >
+        Next
+      </Button>
+    </div>
+  );
 }
