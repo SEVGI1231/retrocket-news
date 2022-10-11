@@ -1,0 +1,10 @@
+.title{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20rem;
+    color: #eeac8d;
+
+}

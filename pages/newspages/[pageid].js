@@ -11,7 +11,6 @@ export default function Pages({ data }) {
     let recentlyViewedData = JSON.parse(sessionStorage.getItem("post"));
     setRecentlyViewedData(recentlyViewedData);
   }, []);
-
   return (
     <>
       <div className={styles.page}>
@@ -44,5 +43,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const res = await fetch(`${BaseURL}/posts/${params.pageid}.json`);
   const { data } = await res.json();
-  return { props: { data } };
+  return {
+    props: { data },
+  };
 }
