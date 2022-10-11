@@ -1,17 +1,26 @@
 import Nav from "react-bootstrap/Nav";
 import { useRouter } from "next/router";
-import Link from "next/link";
+import styles from "./header.module.scss";
 
 export function Header() {
   const router = useRouter();
   return (
     <>
-      <Nav justify variant="tabs" defaultActiveKey="/home">
-        <Nav.Item>
-          <Link href="/newspages/1">Home</Link>
+      <Nav
+        className={styles.navbar}
+        justify
+        variant="tabs"
+        defaultActiveKey="/home"
+      >
+        <Nav.Item className={styles.item}>
+          <Nav.Link className={styles.link} href="/newspages/1">
+            Home
+          </Nav.Link>
         </Nav.Item>
-        <Nav.Item>
-          <Link href="/authors">Authors</Link>
+        <Nav.Item className={styles.item}>
+          <Nav.Link className={styles.link} href="/authors">
+            Authors
+          </Nav.Link>
         </Nav.Item>
       </Nav>
     </>
