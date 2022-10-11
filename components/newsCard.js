@@ -12,7 +12,7 @@ export function NewsCard({ post, recentlyLiked, setRecentlyLiked }) {
       sessionStorage.setItem("post", "[]");
     }
     let oldData = JSON.parse(sessionStorage.getItem("post"));
-    oldData.push(post);
+    oldData.unshift(post);
     sessionStorage.setItem("post", JSON.stringify(oldData));
   }
 

@@ -6,14 +6,11 @@ import { RecentlyViewed } from "../../components/recentlyViewed";
 import { useEffect, useState } from "react";
 
 export default function Pages({ data }) {
-  // const pageNumber = newspages.query.pageid;
-  // console.log(pageNumber);
   const [recentlyViewedData, setRecentlyViewedData] = useState([]);
   useEffect(() => {
     let recentlyViewedData = JSON.parse(sessionStorage.getItem("post"));
     setRecentlyViewedData(recentlyViewedData);
   }, []);
-  console.log(data);
   return (
     <>
       <div className={styles.page}>
@@ -46,5 +43,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const res = await fetch(`${BaseURL}/posts/${params.pageid}.json`);
   const { data } = await res.json();
-  return { props: { data } };
+  return {
+    props: { data },
+  };
 }
