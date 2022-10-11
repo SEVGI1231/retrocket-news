@@ -1,11 +1,11 @@
 $pink: #ff7474;
-$orange: #f59b71;
-$green: #c7c77f;
-$yellow: #e0e0a8;
-$light: #f1f1c1;
+$orange: #eeac8d;
+$green: #d8f0be;
+$light: #e6efe0;
 
 .navbar{
-    background-color: $light;
+    background-color: $green;
+    width: 100%;
 }
 .link{
     color: $pink;
@@ -15,6 +15,6 @@ $light: #f1f1c1;
 }
 .item{
     &:hover{
-        background-color: $yellow;
+        background-color: $light;
     }
 }
