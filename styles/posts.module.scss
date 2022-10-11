@@ -1,0 +1,33 @@
+.page{
+    margin: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+
+}
+.profileimg{
+    width: 70px;
+    height: 70px;
+    border-radius: 40%;
+    margin-bottom: 1rem;
+}
+.writerinfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 1rem;
+    width: 100%;
+    p{
+        margin-left: 1rem;
+        font-size: 1.2rem;
+        font-weight: 200;
+    }
+    
+}
+.featuredimg{
+    height: 500px;
+    width: 500px;
+    justify-content: center;
+}

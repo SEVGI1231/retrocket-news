@@ -1,28 +1,30 @@
 import { BaseURL } from "../../utils/baseurl";
-import { NewsCard } from "../../components/newsCard.js";
-import styles from "../../styles/posts.module.css";
+import { NewsCard, useRecentlyLikedData } from "../../components/newsCard.js";
+import styles from "../../styles/pages.module.css";
 import { PaginationTab } from "../../components/PaginationTab";
-export default function Posts({ pageid, data }) {
+
+export default function Pages({ data }) {
   console.log(data);
+
   return (
     <>
       <div className={styles.page}>
         {data.map((post) => (
           <>
-            <NewsCard
-              key={post.id}
-              title={post.title}
-              date={post.published_at}
-              postImage={post.featured_image_url}
-              authorImage={post.user.profile_image}
-              name={post.user.name}
-              surname={post.user.surname}
-            />
+            <NewsCard key={post.id} post={post} />
           </>
         ))}
       </div>
       <div className={styles.pagination}>
         <PaginationTab />
+      </div>
+      <div>
+        <h2>Recently Visited News</h2>
+        {typeof window !== "undefined" &&
+          JSON.parse(sessionStorage.getItem("post")) !== null &&
+          JSON.parse(sessionStorage.getItem("post")).map((post) => (
+            <p>{post.title}</p>
+          ))}
       </div>
     </>
   );
