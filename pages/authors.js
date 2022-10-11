@@ -3,7 +3,6 @@ import { BaseURL } from "../utils/baseurl";
 import styles from "../styles/authors.module.css";
 
 export default function Authors({ authors }) {
-  console.log(authors);
   return (
     <div className={styles.page}>
       {authors.map((author) => (

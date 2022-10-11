@@ -6,13 +6,11 @@ import { RecentlyViewed } from "../../components/recentlyViewed";
 import { useEffect, useState } from "react";
 
 export default function Pages({ data }) {
-  console.log(data);
   const [recentlyViewedData, setRecentlyViewedData] = useState([]);
   useEffect(() => {
     let recentlyViewedData = JSON.parse(sessionStorage.getItem("post"));
     setRecentlyViewedData(recentlyViewedData);
   }, []);
-  console.log(recentlyViewedData);
 
   return (
     <>

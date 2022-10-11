@@ -1,14 +1,7 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
-  nextConfig: {
-    reactStrictMode: true,
-    swcMinify: true,
-  },
-  images: {
-    protocol: "https",
-    domains: ["raw.githubusercontent.com"],
-    hostname: "raw.githubusercontent.com",
-  },
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
 };
 
-// (module.exports = nextConfig, images);
+module.exports = nextConfig;

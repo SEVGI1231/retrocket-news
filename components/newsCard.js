@@ -34,6 +34,7 @@ export function NewsCard({ post, recentlyLiked, setRecentlyLiked }) {
                 "post/",
                 "posts/"
               )}`}
+              alt="news photo"
             />
             <Card.Title> {post.title}</Card.Title>
           </Card.Body>
@@ -42,6 +43,7 @@ export function NewsCard({ post, recentlyLiked, setRecentlyLiked }) {
             <Card.Img
               src={`${BaseURL}${post.user.profile_image}`}
               className={styles.image}
+              alt="author photo"
             />
             <div className={styles.footerText}>
               <Card.Title>{`${post.user.name} ${post.user.surname}`}</Card.Title>

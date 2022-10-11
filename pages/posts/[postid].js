@@ -8,6 +8,7 @@ export default function Posts({ data }) {
         <h1>{data.title}</h1>
         <div className={styles.writerinfo}>
           <img
+            alt="author photo"
             className={styles.profileimg}
             src={`${BaseURL}${data.user.profile_image.replace(
               "post/",
@@ -21,11 +22,11 @@ export default function Posts({ data }) {
         <hr />
         <div className={styles.postinfo}>
           <img
+            alt="featured_image"
             src={`${BaseURL}${data.featured_image_url.replace(
               "post/",
               "posts/"
             )}`}
-            alt="featured_image"
             className={styles.featuredimg}
           />
           <p className={styles.text}>{data.content}</p>

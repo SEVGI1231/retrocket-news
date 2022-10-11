@@ -7,7 +7,11 @@ export function AuthorCard({ imgURL, name, surname }) {
     <div>
       <Card style={{ width: "16rem" }} className="text-center">
         <Card.Body>
-          <Card.Img className={styles.image} src={`${BaseURL}/${imgURL}`} />
+          <Card.Img
+            alt="author"
+            className={styles.image}
+            src={`${BaseURL}/${imgURL}`}
+          />
           <Card.Title>{`${name} ${surname}`}</Card.Title>
         </Card.Body>
       </Card>
